@@ -15,12 +15,7 @@ resource "azurerm_app_service" "webapp" {
   location            = var.location
   resource_group_name = azurerm_resource_group.demo.name
   app_service_plan_id = azurerm_app_service_plan.appserviceplan.id
-  source_control {
-    repo_url           = "https://github.com/kparjun57/node-hello"
-    branch             = "master"
-    manual_integration = true
-    use_mercurial      = false
-  }
+ 
 }
 
 
